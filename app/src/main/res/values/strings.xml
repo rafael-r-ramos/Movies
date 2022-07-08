@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">NetflixRemake</string>
+    <string name="app_name">Lista de Filmes</string>
+    <string name="menu_home">Ínicio</string>
+    <string name="menu_about">Sobre</string>
+    <string name="social">Social</string>
+    <string name="movies">Filmes</string>
 </resources>
