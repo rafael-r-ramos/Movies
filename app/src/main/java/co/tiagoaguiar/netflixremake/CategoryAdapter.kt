@@ -24,6 +24,8 @@ class CategoryAdapter(private val categories: List<Category>) : RecyclerView.Ada
         return categories.size
     }
 
+
+
     inner class CategoryViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         fun bind(category: Category) {
             val txt : TextView = itemView.findViewById(R.id.txt_title)
@@ -31,7 +33,7 @@ class CategoryAdapter(private val categories: List<Category>) : RecyclerView.Ada
 
             val recyclerView : RecyclerView = itemView.findViewById(R.id.rv_category)
             recyclerView.layoutManager = LinearLayoutManager(itemView.context, RecyclerView.HORIZONTAL,false)
-            recyclerView.adapter = MovieAdapter(category.movies)
+            recyclerView.adapter = MovieAdapter(category.movies, R.layout.movie_item)
 
         }
     }

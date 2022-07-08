@@ -12,12 +12,14 @@ import co.tiagoaguiar.netflixremake.model.Movie
 
 class HomeFragment : Fragment() {
 
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_home,container,false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         val categories = mutableListOf<Category>()
         for(j in 0 until 10 ) {
@@ -30,9 +32,11 @@ class HomeFragment : Fragment() {
             categories.add(category)
         }
 
-        val adapter = CategoryAdapter(categories)
+
         val rv= view.findViewById<RecyclerView>(R.id.rv_main)
         rv.layoutManager = LinearLayoutManager(requireContext())
+
+        val adapter = CategoryAdapter(categories)
         rv.adapter = adapter
 
     }

@@ -4,4 +4,6 @@
     <string name="menu_about">Sobre</string>
     <string name="social">Social</string>
     <string name="movies">Filmes</string>
+    <string name="cast">Elenco: %1$s</string>
+    <string name="similar">Opções Semelhantes</string>
 </resources>
