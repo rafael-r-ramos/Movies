@@ -7,6 +7,7 @@ import android.widget.ImageView
 import androidx.annotation.LayoutRes
 import androidx.recyclerview.widget.RecyclerView
 import co.tiagoaguiar.netflixremake.model.Movie
+import com.squareup.picasso.Picasso
 
 class MovieAdapter(
     private val movies: List<Movie>,
@@ -30,7 +31,7 @@ class MovieAdapter(
     inner class MovieViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         fun bind(movie: Movie) {
             val img : ImageView = itemView.findViewById(R.id.movie_img)
-            // img.setImageResource(movie.coverUrl)
+            Picasso.get().load(movie.coverUrl).into(img)
 
         }
     }
