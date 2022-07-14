@@ -1,9 +1,12 @@
 package co.tiagoaguiar.netflixremake.util
 
+import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.telecom.Call
 import android.util.Log
+import co.tiagoaguiar.netflixremake.HomeFragment
+import co.tiagoaguiar.netflixremake.MovieActivity
 import co.tiagoaguiar.netflixremake.model.Category
 import co.tiagoaguiar.netflixremake.model.Movie
 import org.json.JSONObject
@@ -24,6 +27,7 @@ class CategoryTask(private val callback:Callback) {
 
         fun onResult(categories: List<Category>)
         fun onFailure(message:String)
+
     }
 
     fun execute(url: String) {

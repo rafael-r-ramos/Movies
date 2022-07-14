@@ -1,5 +1,7 @@
 package co.tiagoaguiar.netflixremake
 
+
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -40,7 +42,11 @@ class HomeFragment : Fragment(), CategoryTask.Callback {
         rv.layoutManager = LinearLayoutManager(requireContext())
 
 
-        adapter = CategoryAdapter(categories)
+        adapter = CategoryAdapter(categories){id->
+            val intent = Intent(activity,MovieActivity::class.java)
+            intent.putExtra("id",id)
+            startActivity(intent)
+        }
         rv.adapter = adapter
 
         CategoryTask(this).execute("https://api.tiagoaguiar.co/netflixapp/home?apiKey=e774bf3e-7afb-4704-9f3e-f7c07251c903")
